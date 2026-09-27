@@ -6,37 +6,42 @@
   <title>ReSolve Counselling & Psychotherapy | Muvattupuzha, Kerala</title>
   <meta name="description" content="RCI Licensed Clinical Psychologists offering evidence-based therapy, child behavior therapy, and adolescent support in Muvattupuzha, Kerala.">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Standalone Tailwind CSS Build (Loads reliably without JS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-          },
-          colors: {
-            teal: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
-            },
-            warmgray: '#fbf9f6'
-          }
-        }
-      }
-    }
-  </script>
   <style>
+    :root {
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fbf9f6;
+    }
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(251, 249, 246, 0.95) 100%);
+    }
+    /* Custom brand colors */
+    .bg-warmgray { background-color: #fbf9f6; }
+    .bg-teal-50 { background-color: #f0fdfa; }
+    .bg-teal-100 { background-color: #ccfbf1; }
+    .bg-teal-700 { background-color: #0f766e; }
+    .bg-teal-800 { background-color: #115e59; }
+    .bg-teal-900 { background-color: #134e4a; }
+    .text-teal-700 { color: #0f766e; }
+    .text-teal-800 { color: #115e59; }
+    .text-teal-900 { color: #134e4a; }
+    .border-teal-50 { border-color: #f0fdfa; }
+    .border-teal-100 { border-color: #ccfbf1; }
+    .border-teal-800 { border-color: #115e59; }
+  </style>
+
     html { scroll-behavior: smooth; }
     .hero-bg {
       background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(251, 249, 246, 0.95) 100%);
