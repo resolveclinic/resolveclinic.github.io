@@ -5,77 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ReSolve Counselling & Psychotherapy | Muvattupuzha, Kerala</title>
   <meta name="description" content="RCI Licensed Clinical Psychologists offering evidence-based therapy, child behavior therapy, and adolescent support in Muvattupuzha, Kerala.">
-  
-  <!-- Standalone Tailwind CSS Build (Loads reliably without JS) -->
+
+  <!-- Core Tailwind CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-sans);
     }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: var(--font-sans);
       background-color: #fbf9f6;
+      color: #1e293b;
     }
-    html { scroll-behavior: smooth; }
-    .hero-bg {
-      background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(251, 249, 246, 0.95) 100%);
-    }
-    /* Custom brand colors */
+
+    /* Custom Theme Colors */
     .bg-warmgray { background-color: #fbf9f6; }
     .bg-teal-50 { background-color: #f0fdfa; }
     .bg-teal-100 { background-color: #ccfbf1; }
     .bg-teal-700 { background-color: #0f766e; }
     .bg-teal-800 { background-color: #115e59; }
     .bg-teal-900 { background-color: #134e4a; }
+
+    .hover\:bg-teal-800:hover { background-color: #115e59; }
+    .hover\:bg-teal-50:hover { background-color: #f0fdfa; }
+
+    .text-teal-600 { color: #0d9488; }
     .text-teal-700 { color: #0f766e; }
     .text-teal-800 { color: #115e59; }
     .text-teal-900 { color: #134e4a; }
+    .hover\:text-teal-700:hover { color: #0f766e; }
+
     .border-teal-50 { border-color: #f0fdfa; }
     .border-teal-100 { border-color: #ccfbf1; }
+    .border-teal-200 { border-color: #99f6e4; }
     .border-teal-800 { border-color: #115e59; }
-  </style>
 
-    html { scroll-behavior: smooth; }
+    /* Custom Gradients & Shadows */
     .hero-bg {
-      background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(251, 249, 246, 0.95) 100%);
+      background: linear-gradient(135deg, rgba(240, 253, 250, 0.95) 0%, rgba(251, 249, 246, 0.98) 100%);
+    }
+    .shadow-teal-btn {
+      box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.25), 0 4px 6px -4px rgba(15, 118, 110, 0.15);
+    }
+    .backdrop-header {
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
   </style>
 </head>
-<body class="bg-warmgray text-slate-800 font-sans antialiased">
+<body class="bg-warmgray antialiased">
 
   <!-- Top Announcement / Emergency Bar -->
-  <div class="bg-amber-50 border-b border-amber-200 text-amber-900 text-xs sm:text-sm py-2 px-4 text-center">
-    <i class="fa-solid fa-triangle-exclamation mr-1 text-amber-600"></i>
+  <div class="bg-yellow-50 border-b border-yellow-200 text-yellow-900 text-xs sm:text-sm py-2 px-4 text-center">
+    <i class="fa-solid fa-triangle-exclamation mr-1 text-yellow-600"></i>
     <strong>Important:</strong> We are not an emergency service. In case of emergency, please reach out to the nearest hospital immediately.
   </div>
 
   <!-- Header & Navigation -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <header class="sticky top-0 z-40 backdrop-header border-b border-gray-100 shadow-sm">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-xl bg-teal-700 flex items-center justify-center text-white text-xl font-bold">R</div>
+      <a href="#" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-teal-700 flex items-center justify-center text-white text-xl font-bold shadow-sm">R</div>
         <div>
-          <span class="text-xl font-bold text-slate-900 tracking-tight block leading-none">ReSolve</span>
+          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">ReSolve</span>
           <span class="text-xs text-teal-700 font-medium tracking-wide">Counselling & Psychotherapy</span>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
         <a href="#about" class="hover:text-teal-700 transition">About Us</a>
         <a href="#services" class="hover:text-teal-700 transition">Services</a>
         <a href="#team" class="hover:text-teal-700 transition">Our Team</a>
         <a href="#contact" class="hover:text-teal-700 transition">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-teal-700/20 transition flex items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-teal-btn transition flex items-center space-x-2">
           <i class="fa-regular fa-calendar-check"></i>
           <span>Book Session</span>
         </a>
@@ -84,72 +101,76 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-bg py-20 lg:py-28 border-b border-teal-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+  <section class="hero-bg py-16 lg:py-24 border-b border-teal-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-100/80 text-teal-800 text-xs font-semibold uppercase tracking-wider">
-          <i class="fa-solid fa-shield-halved"></i> RCI Licensed & Registered
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold uppercase tracking-wider">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>RCI Licensed & Registered</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
           A safe, confidential space for your mental wellness.
         </h1>
-        <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
           We integrate evidence-based therapy to help adults, children, and families navigate emotional challenges, build resilience, and achieve meaningful growth.
         </p>
 
-        <div class="pt-4 flex flex-wrap gap-4 items-center">
-          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-6 py-3.5 rounded-full shadow-lg shadow-teal-700/25 transition flex items-center gap-2">
+        <div class="pt-2 flex flex-wrap gap-4 items-center">
+          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-6 py-3.5 rounded-full shadow-teal-btn transition flex items-center space-x-2">
             <span>Book Consultation</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
-          <a href="https://wa.me/+918089406619" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-full shadow-md transition flex items-center gap-2">
+          <a href="https://wa.me/+918089406619" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3.5 rounded-full shadow-md transition flex items-center space-x-2">
             <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>WhatsApp Us</span>
           </a>
         </div>
 
-        <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80 text-xs text-slate-600">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-check text-teal-600"></i> Strict Confidentiality
+        <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-200 text-xs text-gray-600">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-check text-teal-600"></i>
+            <span>Strict Confidentiality</span>
           </div>
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-check text-teal-600"></i> Evidence-Based CBT
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-check text-teal-600"></i>
+            <span>Evidence-Based CBT</span>
           </div>
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-check text-teal-600"></i> In-Clinic & Online
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-check text-teal-600"></i>
+            <span>In-Clinic & Online</span>
           </div>
         </div>
       </div>
 
       <!-- Quick Contact Card -->
-      <div class="lg:col-span-5 bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
-        <h3 class="text-xl font-bold text-slate-900 border-b pb-4">Reach Us Directly</h3>
-        <ul class="space-y-4 text-sm text-slate-600">
-          <li class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 shrink-0">
+      <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-gray-100 space-y-6">
+        <h3 class="text-xl font-bold text-gray-900 border-b pb-4">Reach Us Directly</h3>
+        <ul class="space-y-4 text-sm text-gray-600">
+          <li class="flex items-start space-x-4">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 flex-shrink-0">
               <i class="fa-solid fa-phone"></i>
             </div>
             <div>
-              <span class="block text-xs font-semibold text-slate-400 uppercase">Phone / Call</span>
-              <a href="tel:+918089406619" class="font-medium text-slate-900 hover:text-teal-700">+91 80894 06619</a>
+              <span class="block text-xs font-semibold text-gray-400 uppercase">Phone / Call</span>
+              <a href="tel:+918089406619" class="font-medium text-gray-900 hover:text-teal-700">+91 80894 06619</a>
             </div>
           </li>
-          <li class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 shrink-0">
+          <li class="flex items-start space-x-4">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 flex-shrink-0">
               <i class="fa-solid fa-envelope"></i>
             </div>
             <div>
-              <span class="block text-xs font-semibold text-slate-400 uppercase">Email</span>
-              <a href="mailto:resolve.enquiry@gmail.com" class="font-medium text-slate-900 hover:text-teal-700">resolve.enquiry@gmail.com</a>
+              <span class="block text-xs font-semibold text-gray-400 uppercase">Email</span>
+              <a href="mailto:resolve.enquiry@gmail.com" class="font-medium text-gray-900 hover:text-teal-700">resolve.enquiry@gmail.com</a>
             </div>
           </li>
-          <li class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 shrink-0">
+          <li class="flex items-start space-x-4">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 flex-shrink-0">
               <i class="fa-solid fa-location-dot"></i>
             </div>
             <div>
-              <span class="block text-xs font-semibold text-slate-400 uppercase">Clinic Location</span>
-              <span class="text-slate-800">Cherukapillil H, Angelvoice Junction, East Marady P.O, Muvattupuzha, Kerala-686673</span>
+              <span class="block text-xs font-semibold text-gray-400 uppercase">Clinic Location</span>
+              <span class="text-gray-800 leading-snug block">Cherukapillil H, Angelvoice Junction, East Marady P.O, Muvattupuzha, Kerala-686673</span>
             </div>
           </li>
         </ul>
@@ -162,39 +183,39 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center space-y-4">
         <span class="text-teal-700 text-sm font-semibold uppercase tracking-wider">Who We Are</span>
-        <h2 class="text-3xl font-bold text-slate-900">About ReSolve Counselling & Psychotherapy</h2>
-        <p class="text-slate-600 leading-relaxed">
+        <h2 class="text-3xl font-bold text-gray-900">About ReSolve Counselling & Psychotherapy</h2>
+        <p class="text-gray-600 leading-relaxed">
           At ReSolve, our mission is to offer a supportive, safe, and judgment-free space where individuals and families can overcome life challenges, develop resilience, and foster meaningful personal growth.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 mt-16">
-        <div class="bg-warmgray p-8 rounded-2xl border border-slate-100 hover:border-teal-200 transition">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="bg-warmgray p-8 rounded-2xl border border-gray-100 hover:border-teal-200 transition">
           <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-700 mb-6 text-xl">
             <i class="fa-solid fa-brain"></i>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Evidence-Based Approaches</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Evidence-Based Approaches</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
             Integrating Cognitive Behavioral Therapy (CBT), mindfulness, and person-centered strategies tailored to your unique journey.
           </p>
         </div>
 
-        <div class="bg-warmgray p-8 rounded-2xl border border-slate-100 hover:border-teal-200 transition">
+        <div class="bg-warmgray p-8 rounded-2xl border border-gray-100 hover:border-teal-200 transition">
           <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-700 mb-6 text-xl">
             <i class="fa-solid fa-user-lock"></i>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Strict Confidentiality</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Strict Confidentiality</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
             We adhere strictly to professional ethical codes, ensuring your conversations and records remain private and secure.
           </p>
         </div>
 
-        <div class="bg-warmgray p-8 rounded-2xl border border-slate-100 hover:border-teal-200 transition">
+        <div class="bg-warmgray p-8 rounded-2xl border border-gray-100 hover:border-teal-200 transition">
           <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-700 mb-6 text-xl">
             <i class="fa-solid fa-hand-holding-heart"></i>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Empathetic Care</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Empathetic Care</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
             Putting you at the heart of therapy, enabling growth and healing at a pace comfortable for you.
           </p>
         </div>
@@ -203,59 +224,62 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-20 bg-warmgray border-t border-b border-slate-100">
+  <section id="services" class="py-20 bg-warmgray border-t border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <span class="text-teal-700 text-sm font-semibold uppercase tracking-wider">Services</span>
-        <h2 class="text-3xl font-bold text-slate-900">Therapeutic Solutions</h2>
+        <h2 class="text-3xl font-bold text-gray-900">Therapeutic Solutions</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Service 1 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl">
               <i class="fa-solid fa-user-gear"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Individual Therapy for Adults</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-900">Individual Therapy for Adults</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
               Confidential, evidence-based therapy for stress, anxiety, depression, OCD, and life challenges. Build clarity, resilience, and healthier coping mechanisms.
             </p>
           </div>
-          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Book Adult Session <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center space-x-2 hover:text-teal-900 transition">
+            <span>Book Adult Session</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
 
         <!-- Service 2 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl">
               <i class="fa-solid fa-child-reaching"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Behavior Therapy for Children</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-900">Behavior Therapy for Children</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
               Structured behavioral interventions for ADHD, emotional regulation, academic stress, and social difficulties. Includes parental collaboration and home consultation options.
             </p>
           </div>
-          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Book Child Session <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center space-x-2 hover:text-teal-900 transition">
+            <span>Book Child Session</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
 
         <!-- Service 3 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl">
               <i class="fa-solid fa-people-roof"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Adolescent & Parental Support</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-900">Adolescent & Parental Support</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
               Specialized guidance for teenagers facing emotional and academic hurdles, coupled with structured support to strengthen family communication and harmony.
             </p>
           </div>
-          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Book Family Session <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="mt-6 text-teal-700 font-semibold text-sm inline-flex items-center space-x-2 hover:text-teal-900 transition">
+            <span>Book Family Session</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
       </div>
@@ -267,21 +291,21 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <span class="text-teal-700 text-sm font-semibold uppercase tracking-wider">Our Team</span>
-        <h2 class="text-3xl font-bold text-slate-900">Qualified Mental Health Professionals</h2>
+        <h2 class="text-3xl font-bold text-gray-900">Qualified Mental Health Professionals</h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Team Member 1 -->
-        <div class="bg-warmgray p-8 rounded-3xl border border-slate-100 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <div class="w-24 h-24 rounded-2xl bg-teal-700 text-white flex items-center justify-center font-bold text-3xl shrink-0 shadow-md">
+        <div class="bg-warmgray p-8 rounded-3xl border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+          <div class="w-24 h-24 rounded-2xl bg-teal-700 text-white flex items-center justify-center font-bold text-3xl flex-shrink-0 shadow-md">
             GM
           </div>
           <div class="space-y-2 text-center sm:text-left">
-            <h3 class="text-2xl font-bold text-slate-900">Goodwin Michael</h3>
+            <h3 class="text-2xl font-bold text-gray-900">Goodwin Michael</h3>
             <p class="text-teal-700 font-semibold text-sm">Clinical Psychologist</p>
-            <p class="text-xs text-slate-500 font-medium">BSc Psych, MSc Psych, PD (Cl.Psy)</p>
+            <p class="text-xs text-gray-500 font-medium">BSc Psych, MSc Psych, PD (Cl.Psy)</p>
             <div class="pt-2">
-              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-1 rounded-full">
+              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">
                 RCI & KSMHA Registered
               </span>
             </div>
@@ -289,16 +313,16 @@
         </div>
 
         <!-- Team Member 2 -->
-        <div class="bg-warmgray p-8 rounded-3xl border border-slate-100 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <div class="w-24 h-24 rounded-2xl bg-teal-800 text-white flex items-center justify-center font-bold text-3xl shrink-0 shadow-md">
+        <div class="bg-warmgray p-8 rounded-3xl border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+          <div class="w-24 h-24 rounded-2xl bg-teal-800 text-white flex items-center justify-center font-bold text-3xl flex-shrink-0 shadow-md">
             JM
           </div>
           <div class="space-y-2 text-center sm:text-left">
-            <h3 class="text-2xl font-bold text-slate-900">Jaison Mathew</h3>
+            <h3 class="text-2xl font-bold text-gray-900">Jaison Mathew</h3>
             <p class="text-teal-700 font-semibold text-sm">Rehabilitation Counsellor</p>
-            <p class="text-xs text-slate-500 font-medium">BSc Psych, MA Psych, MSW, PGDRP</p>
+            <p class="text-xs text-gray-500 font-medium">BSc Psych, MA Psych, MSW, PGDRP</p>
             <div class="pt-2">
-              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-1 rounded-full">
+              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">
                 RCI Registered
               </span>
             </div>
@@ -312,7 +336,7 @@
   <section id="contact" class="py-20 bg-teal-900 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
       <h2 class="text-3xl sm:text-4xl font-bold">Ready to Start Your Journey?</h2>
-      <p class="text-teal-100 max-w-xl mx-auto text-lg">
+      <p class="text-teal-100 max-w-xl mx-auto text-base sm:text-lg">
         Book an online or in-clinic consultation session easily through our booking portal or reach out on WhatsApp.
       </p>
 
@@ -320,26 +344,27 @@
         <a href="https://cal.com/resolveclinic/consultation" target="_blank" class="bg-white text-teal-900 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-teal-50 transition">
           Book Consultation Now
         </a>
-        <a href="https://wa.me/+918089406619" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-full shadow-lg transition flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
+        <a href="https://wa.me/+918089406619" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-full shadow-lg transition flex items-center space-x-2">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>WhatsApp Us</span>
         </a>
       </div>
 
-      <div class="pt-12 border-t border-teal-800 grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-teal-200">
-        <div>
-          <i class="fa-solid fa-phone mb-2 text-teal-400 block text-lg"></i>
-          <span>+91 80894 06619</span>
+      <div class="pt-12 border-t border-teal-800 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-teal-100">
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-phone mb-2 text-teal-300 text-lg"></i>
+          <a href="tel:+918089406619" class="hover:text-white">+91 80894 06619</a>
         </div>
-        <div>
-          <i class="fa-solid fa-envelope mb-2 text-teal-400 block text-lg"></i>
-          <span>resolve.enquiry@gmail.com</span>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-envelope mb-2 text-teal-300 text-lg"></i>
+          <a href="mailto:resolve.enquiry@gmail.com" class="hover:text-white">resolve.enquiry@gmail.com</a>
         </div>
-        <div>
-          <i class="fa-brands fa-instagram mb-2 text-teal-400 block text-lg"></i>
+        <div class="flex flex-col items-center">
+          <i class="fa-brands fa-instagram mb-2 text-teal-300 text-lg"></i>
           <a href="https://www.instagram.com/resolve_counselling_clinic/" target="_blank" class="underline hover:text-white">@resolve_counselling_clinic</a>
         </div>
-        <div>
-          <i class="fa-solid fa-map-pin mb-2 text-teal-400 block text-lg"></i>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-map-pin mb-2 text-teal-300 text-lg"></i>
           <span>Muvattupuzha, Kerala</span>
         </div>
       </div>
@@ -347,7 +372,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+  <footer class="bg-gray-900 text-gray-400 text-xs py-8 border-t border-gray-800">
     <div class="max-w-6xl mx-auto px-4 text-center space-y-2">
       <p>&copy; ReSolve Counselling & Psychotherapy. All rights reserved.</p>
       <p>Address: Cherukapillil H, Angelvoice Junction, East Marady P.O, Muvattupuzha, Kerala - 686673</p>
@@ -355,7 +380,7 @@
   </footer>
 
   <!-- Floating WhatsApp CTA Button -->
-  <a href="https://wa.me/+918089406619" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 transition flex items-center justify-center z-50">
+  <a href="https://wa.me/+918089406619" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition flex items-center justify-center z-50">
     <i class="fa-brands fa-whatsapp text-2xl"></i>
   </a>
 
